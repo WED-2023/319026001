@@ -1,7 +1,72 @@
-#menu
-{
+#menu {
 	position: fixed;
 	width: 100%;
 	height: 35px;
-	background: white;
+	background: rgb(241, 240, 240);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid rgb(243, 243, 243);
+	background-color: blue;
+
+}
+
+table.section-title {
+	background-color: white; /* Custom background color for the image table */
+}
+.section-title {
+	text-align: center; /* Center align the text */
+  }
+
+table td {
+	width: 16.67%; /* Set to 1/6th of the table width for 6 cells in a row */
+	text-align: center;
+	padding: 10px;
+	white-space: nowrap; /* Prevents wrapping onto multiple lines */
+}
+
+table a {
+	color: white;
+	text-decoration: none;
+	font-family: Arial, sans-serif;
+	font-size: 18px;
+}
+
+table a:hover {
+	font-weight: bold;
+	font-size: 20px;
+	background-color: blue;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+#about {
+	font-size: 20px;
+	text-align: center;
+}
+#photos {
+	font-size: 20px;
+	text-align: center;
+}
+#playlist {
+	font-size: 20px;
+	text-align: center;
+}
+#like {
+	font-size: 20px;
+	text-align: center;
+}
+#qrcoder {
+	font-size: 20px;
+	text-align: center;
+}
+#spa {
+	font-size: 20px;
+	text-align: center;
+}
+#contact {
+	font-size: 20px;
+	text-align: center;
 }
