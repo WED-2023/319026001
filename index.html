@@ -57,7 +57,7 @@
     </td>
     <td>
       <img src="סבתא/7.jpg" width="100%" height="300" alt="Image 7">
-      <p>סבתא חמדה והנכד הראשון שלה</p>
+      <p>סבתא חמדה והנין הראשון שלה</p>
     </td>
     <td>
       <img src="סבתא/6.jpg" width="100%" height="300" alt="Image 6">
@@ -65,9 +65,6 @@
     </td>
   </tr>
 </table>
-
-
-
 </section>
 
 <section id="playlist" class="section">
@@ -75,9 +72,8 @@
 <br/>
 <br/>
 <h2><b>My playlist</b></h2>
-<br/>
-<br/>
-<br/>
+<p>השיר האהוב ביותר על סבתא חמדה</p>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/I7FIYWsyDb8" frameborder="0" allowfullscreen></iframe>
 </section>
 
 <section id="like" class="section">
@@ -85,9 +81,7 @@
 <br/>
 <br/>
 <h2><b>give me a like</b></h2>
-<button id="likeButton">Like</button>
-<p>Likes: <span id="likeCount">0</span></p>
-<br/>
+<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
 </section>
 
 <section id="qrcoder" class="section">
@@ -95,8 +89,7 @@
 <br/>
 <br/>
 <h2><b>scan my code</b></h2>
-<br/>
-<br/>
+<img src="סבתא/frame.png" width="15%" height="300" >
 <br/>
 </section>
 
@@ -115,9 +108,20 @@
 <br/>
 <br/>
 <h2><b>contact me</b></h2>
-<br/>
-<br/>
-<br/>
+<form id="contactForm">
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" required><br><br>
+  
+  <!-- Emoji Picker -->
+  <label for="emoji">Select Emoji:</label><br>
+  <emoji-picker id="emoji" name="emoji" required></emoji-picker><br><br>
+  
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+  
+  <button type="submit">Send</button>
+</form>
+
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -129,10 +133,12 @@ $(function(){
   });
 });
 </script>
+
 <script type="text/javascript">
  $(document).scroll(function() {
     $('#menu').toggle($(this).scrollTop()>1000)
- });​
+ });
+
 // Get the like button and like count elements
 const likeButton = document.getElementById('likeButton');
 const likeCountElement = document.getElementById('likeCount');
@@ -141,23 +147,62 @@ const likeCountElement = document.getElementById('likeCount');
 let likeCount = 0;
 let liked = false;
 
-// Add event listener to the like button
-likeButton.addEventListener('click', function() {
-    // Toggle liked state
-    liked = !liked;
-    
-    // Update the like count
-    if (liked) {
-        likeCount++;
-    } else {
-        likeCount--;
-    }
+// Function to update the like button text
+function updateButton() {
+  likeButton.textContent = liked ? "Dislike" : "Like";
+}
 
-    // Update the like count display
-    likeCountElement.textContent = likeCount;
+// Function to handle like button click
+likeButton.addEventListener('click', function() {
+  // Toggle liked state
+  liked = !liked;
+
+  // Update the like count
+  likeCount += liked ? 1 : -1;
+
+  // Update the like count display
+  likeCountElement.textContent = likeCount;
+
+  // Update the like button text
+  updateButton();
 });
 
- </script>
+// Initialize the like button text
+updateButton();
+
+
+</script>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="yZ5qMgpl"></script>
+
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting
+    
+    // Get form data
+    const formData = new FormData(this);
+    
+    // Convert form data to JSON object
+    const jsonData = {};
+    formData.forEach((value, key) => {
+      jsonData[key] = value;
+    });
+    
+    // Example: Sending form data via email (replace with your own backend)
+    const url = "mailto:noaye22350@gmail.com" + // Replace with your email address
+                "?subject=Contact Form Submission" +
+                "&body=Email: " + encodeURIComponent(jsonData.email) +
+                "%0D%0ASelected Emoji: " + encodeURIComponent(jsonData.emoji) +
+                "%0D%0AMessage: " + encodeURIComponent(jsonData.message);
+    
+    // Open email client with pre-filled data
+    window.open(url, "_blank");
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/emoji-picker-element"></script>
+
+
 </body>
 
 </html>
