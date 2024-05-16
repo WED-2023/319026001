@@ -5,24 +5,29 @@
 <title>סבתא חמדה</title>
 </head>
 <body>
-  <table>
-    <tr>
-      <td><a href="#about">about</a></td>
-      <td><a href="#photos">My Photos</a></td>
-      <td><a href="#playlist">My Playlist</a></td>
-      <td><a href="#like">Like</a></td>
-      <td><a href="#qrcoder">QR code</a></td>
-      <td><a href="#spa">Q&A</a></td>
-      <td><a href="#contact">Contact Me</a></td>
-    </tr>
-  </table>
+
+  <div id="menu" >
+   
+      <tr>
+        <td><a href="#about">about</a></td>
+        <td><a href="#photos">My Photos</a></td>
+        <td><a href="#playlist">My Playlist</a></td>
+        <td><a href="#like">Like</a></td>
+        <td><a href="#qrcoder">QR code</a></td>
+        <td><a href="#spa">Q&A</a></td>
+        <td><a href="#contact">Contact Me</a></td>
+      </tr>
+    
+  </div>
+  
  
 <section id="about" class="section">
 <br/>
+<br/><img src="סבתא/ברוכים.gif" width="40%" height="50">
 <br/>
 <br/>
 <h2><b>About me</b></h2>
-<br/>סבתא חמדה נולדה בטורקיה בשנת 1934 בשם חתון ניסני
+סבתא חמדה נולדה בטורקיה בשנת 1934 בשם חתון ניסני
 <br/>סבתא התייתמה מאימה בגיל 5 בשל מחלה של האם וגדלה עם אבא ואח
 <br/>במיאנדב-הכפר בו גדלה, היה אסור לבנות ללכת לבית הספר ולרכוש השכלה ולכן נשארה בבית ובילתה את מרבית זמנה בתחזוקת הבית, ברקימת מפות, סריגת כיפות ומפגשים חברתיים. בבעלות המשפחה היו מספר כרמים והם התפרנסו מהכנת יין ומכירת ענבים
 <br/>על אף מצבם הכלכלי והחברתי שהיו מאוד מבוססים בטורקיה, החלום של המשפחה של סבתא חמדה היה לעלות לארץ ישראל.  ואכן הם עלו כשסבתא הייתה בת 17
@@ -33,42 +38,38 @@
 </section>
 
 <section id="photos" class="section">
-<br/>
-<br/>
-<br/>
-<h2><b>My Photo</b></h2>
-<table class="section-title">
-  <tr>
-    <td>
-      <img src="סבתא/friends.jpg" width="100%" height="300" alt="Image 1">
-      <p>סבתא עם חברים מטורקיה</p>
-    </td>
-    <td>
-      <img src="סבתא/2.jpg" width="100%" height="300" alt="Image 2">
-      <p>סבתא חמדה</p>
-    </td>
-    <td>
-      <img src="סבתא/3.jpg" width="100%" height="300" alt="Image 3">
-      <p>סבתא חמדה וסבא שלום</p>
-    </td>
-    <td>
-      <img src="סבתא/5.jpg" width="100%" height="300" alt="Image 5">
-      <p>מבלים בים המלח</p>
-    </td>
-    <td>
-      <img src="סבתא/7.jpg" width="100%" height="300" alt="Image 7">
-      <p>סבתא חמדה והנין הראשון שלה</p>
-    </td>
-    <td>
-      <img src="סבתא/6.jpg" width="100%" height="300" alt="Image 6">
-      <p>נועה הנכדה וסבתא חמדה</p>
-    </td>
-  </tr>
-</table>
+  <br/>
+  <br/>
+  <h2><b>My Photos</b></h2>
+  <div class="photo-container">
+      <div class="photo">
+        <img src="סבתא/2.jpg" alt="Image 2">
+        <p>סבתא חמדה</p>
+      </div>
+      <div class="photo">
+          <img src="סבתא/3.jpg" alt="Image 3">
+          <p>סבתא חמדה וסבא שלום</p>
+      </div>
+      <div class="photo">
+          <img src="סבתא/friends.jpg" alt="Image 1">
+          <p>סבתא עם חברים מטורקיה</p>
+      </div>
+      <div class="photo">
+          <img src="סבתא/5.jpg" alt="Image 5">
+          <p>מבלים בים המלח</p>
+      </div>
+      <div class="photo">
+          <img src="סבתא/7.jpg" alt="Image 7">
+          <p>סבתא חמדה והנין הראשון שלה</p>
+      </div>
+      <div class="photo">
+          <img src="סבתא/6.jpg" alt="Image 6">
+          <p>נועה הנכדה וסבתא חמדה</p>
+      </div>
+  </div>
 </section>
 
 <section id="playlist" class="section">
-<br/>
 <br/>
 <br/>
 <h2><b>My playlist</b></h2>
@@ -77,50 +78,77 @@
 </section>
 
 <section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<h2><b>give me a like</b></h2>
-<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+  <br/>
+  <br/>
+  <h2><b>Give me a like</b></h2>
+  <p>אהבתם את האתר? פרגנו לנו בלייק</p>
+  <button id="likeButton">Like</button>
+  <div id="likeCount">0</div> <!-- Display the like count -->
+  <br/>
+  <p>לסבתא חמדה אין פייסבוק, אבל היא ירושלמית בלב ובנשמה. אז תעשו לייק למלון הירושלמי האהוב עליה</p>
+  <div class="fb-like" data-href="https://www.facebook.com/glglz.co.il" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+
 </section>
 
 <section id="qrcoder" class="section">
 <br/>
 <br/>
-<br/>
 <h2><b>scan my code</b></h2>
-<img src="סבתא/frame.png" width="15%" height="300" >
-<br/>
+<img src="סבתא/frame.png" style="max-width: 100%; height: auto;">
 </section>
 
 <section id="spa" class="section">
 <br/>
 <br/>
-<br/>
 <h2><b>ans</b></h2>
-<br/>
-<br/>
-<br/>
 </section>
 
 <section id="contact" class="section">
 <br/>
 <br/>
-<br/>
-<h2><b>contact me</b></h2>
-<form id="contactForm">
-  <label for="email">Your Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  
-  <!-- Emoji Picker -->
-  <label for="emoji">Select Emoji:</label><br>
-  <emoji-picker id="emoji" name="emoji" required></emoji-picker><br><br>
-  
-  <label for="message">Message:</label><br>
-  <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-  
-  <button type="submit">Send</button>
+<h2><b>?רוצים ליצור קשר עם סבתא חמדה</b></h2>
+
+  <form action="mailto:noayesha@post.bgu.ac.il" method="GET" enctype="text/plain">
+  <label for="msubject">נושא: </label>
+  <input name="subject" placeholder="" type="text" size="80"/>
+  <br/>  <br/>  <br/>
+  <label for="mcontent">תוכן ההודעה </label>
+  <textarea name="body" id="body" placeholder="רשמו את תוכן ההודעה" rows="10" cols="50"></textarea>
+  <br/><br/>
+
+  <label for="memoji">תבחרו חייכן </label>
+  <select name="emoji" id="emoji" onchange="myFunction()">
+    <option value=Emoji>Emoji</option>
+    <option value="&#128514">&#128514</option>
+    <option value="&#128523">&#128523</option>
+    <option value="&#128525">&#128525</option>
+    <option value="&#128564">&#128564</option>
+    <option value="&#128151">&#128151</option>
+    <option value="&#128076">&#128076</option>
+    <option value="&#128545">&#128545</option>
+    <option value="&#128546">&#128546</option>
+  </select>
+
+  <script>
+    function myFunction() {
+      const textarea = document.getElementById('body');
+      if (document.getElementById('emoji').value != 'Emoji') {
+        textarea.value += document.getElementById('emoji').value;
+      }
+      
+    }
+  </script>
+
+  <br/>
+  <br/>
+  <input type="submit" value="Send" />
+  <br/>
+  <br/>
 </form>
+
+</section>
+
+
 
 </section>
 
@@ -135,45 +163,10 @@ $(function(){
 </script>
 
 <script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });
-
-// Get the like button and like count elements
-const likeButton = document.getElementById('likeButton');
-const likeCountElement = document.getElementById('likeCount');
-
-// Initialize the like count
-let likeCount = 0;
-let liked = false;
-
-// Function to update the like button text
-function updateButton() {
-  likeButton.textContent = liked ? "Dislike" : "Like";
-}
-
-// Function to handle like button click
-likeButton.addEventListener('click', function() {
-  // Toggle liked state
-  liked = !liked;
-
-  // Update the like count
-  likeCount += liked ? 1 : -1;
-
-  // Update the like count display
-  likeCountElement.textContent = likeCount;
-
-  // Update the like button text
-  updateButton();
-});
-
-// Initialize the like button text
-updateButton();
-
-
 </script>
+
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="yZ5qMgpl"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v19.0" nonce="2IACoTti"></script>
 
 
 <script>
@@ -199,10 +192,33 @@ updateButton();
     // Open email client with pre-filled data
     window.open(url, "_blank");
   });
+  
 </script>
+
+<script>document.addEventListener('DOMContentLoaded', function () {
+  let likeCount = 0; // Initialize like count
+
+  // Function to handle like button click
+  function handleLike() {
+      const likeButton = document.getElementById('likeButton');
+      const likeCountDisplay = document.getElementById('likeCount');
+
+      if (likeButton.innerText === 'Like') {
+          likeCount++;
+          likeButton.innerText = 'Dislike';
+      } else {
+          likeCount--;
+          likeButton.innerText = 'Like';
+      }
+
+      likeCountDisplay.innerText = likeCount; // Update like count display
+  }
+
+  // Add event listener to like button
+  document.getElementById('likeButton').addEventListener('click', handleLike);
+});
+</script>
+
 <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element"></script>
-
-
 </body>
-
 </html>

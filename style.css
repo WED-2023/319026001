@@ -1,48 +1,26 @@
-#menu {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 35px;
-	background: rgb(241, 240, 240);
-	z-index: 1000; /* Ensure the menu appears above other elements */
-
-}
 body {
     background-color: #ADD8E6; /* Light blue color */
 }
 
-table {
+#menu {
 	width: 100%;
-	border-collapse: collapse;
-	border: 2px solid rgb(243, 243, 243);
-	background-color: blue;
-
+	height: 35px;
+	background: rgb(98, 162, 214);
+	position: fixed;
 }
-
-table.section-title {
-	background-color: white; /* Custom background color for the image table */
-}
-.section-title {
-	text-align: center; /* Center align the text */
-  }
-
-table td {
-	width: 16.67%; /* Set to 1/6th of the table width for 6 cells in a row */
-	text-align: center;
-	padding: 10px;
-	white-space: nowrap; /* Prevents wrapping onto multiple lines */
-}
-
-table a {
-	color: white;
-	text-decoration: none;
+ a {
+    color: white;
+    font-weight: bold;
+	text-decoration:wavy;
 	font-family: Arial, sans-serif;
-	font-size: 18px;
+	font-size: 22px;
+    padding: 10px 15px;
 }
 
-table a:hover {
+
+ a:hover {
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
 	background-color: blue;
 	border-radius: 10px;
 }
@@ -57,7 +35,30 @@ table a:hover {
 	font-size: 20px;
 	text-align: center;
 	color: rgba(0, 0, 255, 0.726);
+}
 
+
+.photo-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around; /* Center align the photos */
+}
+
+.photo {
+	width: 51%; /* Adjust as needed */
+	margin-bottom: 20px;
+}
+
+.photo img {
+	max-width: 60%;
+	height: auto;
+	border-radius: 10px; /* Optional: Add rounded corners to the photos */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow effect */
+}
+
+.photo p {
+	margin-top: 10px;
+	font-size: 16px;
 }
 #playlist {
 	font-size: 20px;
@@ -71,6 +72,32 @@ table a:hover {
 	color: rgba(0, 0, 255, 0.726);
 
 }
+
+#like {
+    text-align: center;
+}
+
+#likeButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: white;
+    background-color: #18dde4;
+    color: white;
+    cursor: pointer;
+    border-radius: 19px;
+    transition: background-color 0.3s;
+}
+
+#likeButton:hover {
+    background-color: #13058f;
+}
+
+#likeCount {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+
 #qrcoder {
 	font-size: 20px;
 	text-align: center;
